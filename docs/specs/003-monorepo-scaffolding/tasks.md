@@ -9,4 +9,4 @@
 - [x] Generate a TypeScript type from the JSON Schema and add one test.
 - [x] Write `.github/workflows/ci.yml` with the Python and Node jobs.
 - [x] Enable branch protection on `main` with both jobs required.
-- [ ] Verify all acceptance criteria and set the spec status to `done`.
+- [x] Verify all acceptance criteria and set the spec status to `done`.

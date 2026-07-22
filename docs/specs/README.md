@@ -40,4 +40,4 @@ A spec has one status in its header:
 |---|---|---|
 | [001](001-project-foundation/spec.md) | Project foundation | done |
 | [002](002-technology-stack/spec.md) | Technology stack | done |
-| [003](003-monorepo-scaffolding/spec.md) | Monorepo scaffolding | in-progress |
+| [003](003-monorepo-scaffolding/spec.md) | Monorepo scaffolding | done |
