@@ -30,10 +30,19 @@ Key rules:
 ## Repository structure
 
 ```
-docs/       SDLC documents (STE)
+docs/           SDLC documents (STE)
+packages/       Python pipeline packages: schema, collector, runner, metrics, analysis
+apps/           TypeScript applications: web (phase 2)
+data/           problem metadata and small test fixtures
 ```
 
-Code directories do not exist yet. The planned structure is in `docs/software-design-description.md`.
+The toolchains, the dependency rules, and the test strategy are in `docs/technology-stack.md`. Read that file before you write code. Key rules:
+
+- Python packages: uv, Pydantic, ruff, pyright, pytest.
+- TypeScript: strict mode, pnpm, eslint, vitest.
+- All packages can depend on `packages/schema`. The `schema` package must not depend on other packages.
+- Tests must not call external APIs. Use recorded fixtures.
+- A change to the metrics engine that alters a golden-test value must be intentional and must increase the engine version.
 
 ## Conventions
 

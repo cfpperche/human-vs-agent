@@ -10,5 +10,6 @@ This directory contains the SDLC documents of the project. All documents follow 
 | [vision-and-scope.md](vision-and-scope.md) | The problem, the gap in current benchmarks, and the three project phases. |
 | [software-requirements-specification.md](software-requirements-specification.md) | The requirements for phase 1, and the marked requirements for phases 2 and 3. |
 | [software-design-description.md](software-design-description.md) | The architecture: components, data schema, judging system, and transparency log. |
+| [technology-stack.md](technology-stack.md) | The languages, tools, monorepo layout, data storage, test strategy, and CI. |
 | [project-plan.md](project-plan.md) | The roadmap, the deliverables, and the exit criteria for each phase. |
 | [risk-register.md](risk-register.md) | The known risks and their mitigations. |

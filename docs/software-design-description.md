@@ -10,15 +10,19 @@ collector  ->  problem store  ->  runner  ->  metrics engine
                               judging system <----+----> transparency log
 ```
 
-## Planned repository structure
+## Repository structure
+
+The monorepo layout, the toolchains, and the dependency rules are in the [technology stack](technology-stack.md) document.
 
 ```
-problems/           one directory for each problem: statement, tests, metadata
-human-solutions/    collected human solutions with source metadata
-agents/             one adapter for each model harness
-runner/             sandbox execution and metrics collection
-analysis/           aggregation, report, and dashboards
-docs/               SDLC documents
+docs/                SDLC documents
+packages/schema/     canonical data schema, JSON Schema export
+packages/collector/  Codeforces and SWE-bench collection
+packages/runner/     agent harnesses and sandbox execution
+packages/metrics/    metrics engine
+packages/analysis/   aggregation and report
+apps/web/            web platform (phase 2)
+data/                metadata and small test fixtures
 ```
 
 ## Components
