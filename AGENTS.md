@@ -14,6 +14,15 @@ The project has three phases:
 
 The current phase is phase 1.
 
+## Spec process (mandatory)
+
+The project uses spec-driven development. The process is in `docs/specs/README.md`. Key rules:
+
+- Do not start implementation without an approved spec in `docs/specs/NNN-short-name/`.
+- Update `tasks.md` of the active spec while you work.
+- When a spec becomes `done`, update the baseline documents in `/docs`.
+- Do not change a `done` spec. Create a new spec for a change.
+
 ## Documentation standard (mandatory)
 
 All documents in this repository must follow ASD-STE100 (Simplified Technical English). The rules are in `docs/documentation-standard.md`. Read that file before you write or change any document.

@@ -13,3 +13,6 @@ This directory contains the SDLC documents of the project. All documents follow 
 | [technology-stack.md](technology-stack.md) | The languages, tools, monorepo layout, data storage, test strategy, and CI. |
 | [project-plan.md](project-plan.md) | The roadmap, the deliverables, and the exit criteria for each phase. |
 | [risk-register.md](risk-register.md) | The known risks and their mitigations. |
+| [specs/](specs/README.md) | The spec-driven development process and all specs. |
+
+The documents above show the current state of the project. The specs in [specs/](specs/README.md) record each unit of work and are the change history.
