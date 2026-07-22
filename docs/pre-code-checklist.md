@@ -14,9 +14,11 @@ This document records all foundation steps, complete and pending, up to the firs
 - [x] Write the SDLC baseline documents in `/docs`.
 - [x] Decide the technology stack: hybrid monorepo, schema contract, data split, test strategy, CI. See [technology-stack.md](technology-stack.md).
 - [x] Adopt the spec process with `docs/specs/NNN-short-name/`. See [specs/README.md](specs/README.md).
+- [x] Record the foundation work in the retroactive specs 001 and 002.
 - [x] Create `HANDOFF.md` for session continuity.
 - [x] Define the development workflow: branches, gates, self-review, owner merge, Conventional Commits. See [development-workflow.md](development-workflow.md).
 - [x] Write spec 003 (monorepo scaffolding) with plan and tasks.
+- [x] Create this checklist and review the plan for missing critical steps.
 
 ## Pending: before the first line of code
 
