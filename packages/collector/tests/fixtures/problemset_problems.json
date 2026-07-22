@@ -1,0 +1,8 @@
+{
+  "problems": [
+    {"contestId": 2100, "index": "A", "name": "Sum of Two", "rating": 800, "tags": ["math"]},
+    {"contestId": 2100, "index": "B", "name": "Too Hard", "rating": 2600, "tags": ["dp"]},
+    {"contestId": 1500, "index": "A", "name": "Old Problem", "rating": 900, "tags": []}
+  ],
+  "problemStatistics": []
+}

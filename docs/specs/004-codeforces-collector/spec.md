@@ -1,6 +1,6 @@
 # Spec 004: Codeforces collector
 
-- Status: approved
+- Status: in-progress
 - Date: 2026-07-22
 
 ## Goal
@@ -24,9 +24,21 @@ Implement the collector for the Codeforces source. The collector downloads recen
 ## Acceptance criteria
 
 - A manual smoke run collects 3 problems with submissions from a live window, and every record validates against the schema.
-- Unit tests cover the API client, the page parser, the anonymizer, and the storage, with recorded fixtures.
-- All CI gates stay green.
-- The private mapping file never appears in git status.
+  Status: partially met. See the finding below.
+- Unit tests cover the API client, the page parser, the anonymizer, and the storage, with recorded fixtures. Met.
+- All CI gates stay green. Met.
+- The private mapping file never appears in git status. Met.
+
+## Finding: submission source code is blocked
+
+The smoke run of 2026-07-22 collected 3 live problems with statements and sample tests. Every record validated against the schema. Submission metadata (rating, runtime, memory, language) came back through the API for all 9 candidate human submissions. But every fetch of a submission page returned a Codeforces browser challenge instead of source code. This project does not try to defeat the challenge. See finding 6 in [data-licensing-review.md](../../data-licensing-review.md).
+
+This blocks requirement 6 as written: the collector cannot fill `HumanSolution.source_code` from live submission pages today. Options for the owner, not yet decided:
+
+1. Reuse human solutions already published under an open license by precedent datasets (CodeContests, Open-R1 `codeforces-cots`), for problems that those datasets cover. Consistent with the research already in the licensing review.
+2. Collect with an authenticated Codeforces session (the owner logs in through a real browser and exports the session cookie). Using an account's own authenticated access differs from defeating anti-bot fingerprinting. This still needs a case-by-case terms check.
+3. Ship phase 1 with problem statements and submission metadata only. Treat `source_code` as pending for a later spec once an approach is chosen. Metrics that only need metadata, like runtime and memory, still work. Readability and code-artifact comparisons wait.
+4. Ask Codeforces for a data export or research access. Bundle this with the permission request already pending with the owner.
 
 ## Out of scope
 

@@ -21,6 +21,7 @@ The review covers the two data sources of phase 1 and the plan to publish a data
    These datasets are public since 2022 or later and stay online.
 4. Precedent is not permission. The copyright of a submission stays with its author. The copyright of a statement stays with the problem author and the platform.
 5. The Codeforces terms page (`codeforces.com/terms`) blocks automated access. A person must read it.
+6. As of 2026-07-22, Codeforces submission pages return a browser challenge (a Cloudflare-style JavaScript check) to automated clients. The official API still gives submission metadata (rating, runtime, memory, language), but the collector cannot retrieve submission source code through the page. See `docs/specs/004-codeforces-collector/spec.md` for the technical finding. This project does not attempt to defeat the challenge: doing so conflicts with the low-volume, respectful-access approach in decision 1.
 
 ## Findings: SWE-bench
 
@@ -41,6 +42,7 @@ The review covers the two data sources of phase 1 and the plan to publish a data
 
 - [ ] Read `codeforces.com/terms` in a browser and confirm that the decisions above do not conflict with it.
 - [ ] Decide on a permission request to Codeforces (a short message to the platform). A positive answer removes the residual risk. This is the recommended path.
+- [ ] Decide how to handle submission source code, blocked by finding 6. See the options in `docs/specs/004-codeforces-collector/spec.md`.
 
 ## Sources
 
