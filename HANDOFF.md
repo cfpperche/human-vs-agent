@@ -3,7 +3,7 @@
 This file gives the project state to the next person or agent. Update this file at the end of each work session.
 
 - Last update: 2026-07-22
-- Last commit: `docs: require a worktree for each spec branch`
+- Last commit: `docs: update the handoff for the session end`
 
 ## Project summary
 
@@ -17,6 +17,8 @@ A comparative study of human solutions and AI-agent solutions to the same progra
 - Spec 001 (project foundation) is done.
 - Spec 002 (technology stack) is done.
 - Spec 003 (monorepo scaffolding) is in `draft`. It waits for owner approval.
+- The goals and the non-goals are defined in `docs/vision-and-scope.md`.
+- `docs/pre-code-checklist.md` governs the order of the remaining foundation work. All items up to the first line of code are there.
 
 ## Locked decisions
 
@@ -25,7 +27,7 @@ A comparative study of human solutions and AI-agent solutions to the same progra
 - Data split: metadata and fixtures in git, full dataset on Hugging Face Datasets.
 - Test strategy: golden tests, schema contract tests, unit tests with recorded fixtures.
 - CI: one GitHub Actions workflow, Python and Node jobs as mandatory merge gates.
-- Development workflow: spec branch, local gates, pull request with adversarial self-review, owner merges with squash, Conventional Commits. See `docs/development-workflow.md`.
+- Development workflow: spec branch in a dedicated worktree outside the clone, local gates, pull request with adversarial self-review, owner merges with squash, Conventional Commits. See `docs/development-workflow.md`.
 
 Details are in `docs/technology-stack.md`.
 
