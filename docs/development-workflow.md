@@ -18,9 +18,18 @@ Work starts only when a spec in `docs/specs/` has the status `approved`. The spe
 
 Exception: small corrections to documents or configuration do not need a spec. Use a `chore/short-name` branch for them.
 
-### 2. Create a branch
+### 2. Create a branch and a worktree
 
 - Branch from `main`: `spec/NNN-short-name`.
+- Create a git worktree for the branch, in a directory outside the repository clone:
+
+```
+git worktree add ../hva-worktrees/NNN-short-name -b spec/NNN-short-name main
+```
+
+- Do all work inside the worktree. Do not work in the main clone. The main clone always stays on `main`.
+- One worktree for each active spec. Parallel agents then do not conflict in one working directory.
+- After the merge, remove the worktree: `git worktree remove ../hva-worktrees/NNN-short-name`.
 - `main` is protected. Only a pull request with green CI can merge.
 - Do not push directly to `main`.
 

@@ -3,7 +3,7 @@
 This file gives the project state to the next person or agent. Update this file at the end of each work session.
 
 - Last update: 2026-07-22
-- Last commit: `docs: define the project goals and non-goals`
+- Last commit: `docs: require a worktree for each spec branch`
 
 ## Project summary
 

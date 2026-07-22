@@ -27,7 +27,7 @@ The project uses spec-driven development. The process is in `docs/specs/README.m
 
 The full flow is in `docs/development-workflow.md`. Key rules:
 
-- Branch from `main` as `spec/NNN-short-name`. Do not push directly to `main`.
+- Branch from `main` as `spec/NNN-short-name`, in a dedicated git worktree outside the clone. Do not work in the main clone. Do not push directly to `main`.
 - Run the local gates before each push. Do not push when a gate fails.
 - Open a pull request with a link to the spec, then do an adversarial review of your own diff and post the findings as a comment.
 - Do not merge. The owner merges with squash.
