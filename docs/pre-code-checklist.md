@@ -28,8 +28,8 @@ This document records all foundation steps, complete and pending, up to the firs
 
 ## Pending: before the first data collection
 
-- [ ] Create the model registry: the model list for the study, the exact model versions, and each knowledge cutoff date. The collector needs the cutoff dates.
-- [ ] Set the study budget: a money cap for API use and a rule for what happens at the cap.
+- [x] Create the model registry. See [model-registry.md](model-registry.md). The TBV cells block the first collection.
+- [x] Set the study budget: USD 400 cap with alert and stop rules. See [model-registry.md](model-registry.md).
 - [ ] Owner: read the Codeforces terms in a browser and decide on a permission request. See the open actions in [data-licensing-review.md](data-licensing-review.md).
 
 ## Pending: before the first agent run
