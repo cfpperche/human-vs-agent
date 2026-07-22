@@ -29,3 +29,7 @@ tmp/
 # Tool caches
 .pytest_cache/
 .ruff_cache/
+
+# Collected data and private mappings
+data/collected/
+data/private/
