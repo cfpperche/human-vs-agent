@@ -1,0 +1,59 @@
+[project]
+name = "hva-workspace"
+version = "0.1.0"
+description = "Workspace root for the human-vs-agent pipeline"
+requires-python = ">=3.12"
+dependencies = [
+  "hva-schema",
+  "hva-collector",
+  "hva-runner",
+  "hva-metrics",
+  "hva-analysis",
+]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.8",
+  "pyright>=1.1.390",
+  "jsonschema>=4.23",
+  "types-jsonschema>=4.23",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[tool.uv.sources]
+hva-schema = { workspace = true }
+hva-collector = { workspace = true }
+hva-runner = { workspace = true }
+hva-metrics = { workspace = true }
+hva-analysis = { workspace = true }
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.isort]
+known-first-party = [
+  "hva_schema",
+  "hva_collector",
+  "hva_runner",
+  "hva_metrics",
+  "hva_analysis",
+]
+
+[tool.pyright]
+include = ["packages"]
+typeCheckingMode = "strict"
+venvPath = "."
+venv = ".venv"
+
+[tool.pytest.ini_options]
+testpaths = ["packages"]

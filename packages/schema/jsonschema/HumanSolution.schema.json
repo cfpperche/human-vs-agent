@@ -1,0 +1,82 @@
+{
+  "properties": {
+    "author_id": {
+      "title": "Author Id",
+      "type": "string"
+    },
+    "author_rating_band": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Author Rating Band"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "language": {
+      "title": "Language",
+      "type": "string"
+    },
+    "memory_kb": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Memory Kb"
+    },
+    "problem_id": {
+      "title": "Problem Id",
+      "type": "string"
+    },
+    "runtime_ms": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Runtime Ms"
+    },
+    "source_code": {
+      "title": "Source Code",
+      "type": "string"
+    },
+    "submitted_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Submitted At"
+    }
+  },
+  "required": [
+    "id",
+    "problem_id",
+    "author_id",
+    "language",
+    "source_code"
+  ],
+  "title": "HumanSolution",
+  "type": "object"
+}

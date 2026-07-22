@@ -1,0 +1,16 @@
+[project]
+name = "hva-runner"
+version = "0.1.0"
+description = "The runner package of the human-vs-agent pipeline"
+requires-python = ">=3.12"
+dependencies = ["hva-schema"]
+
+[tool.uv.sources]
+hva-schema = { workspace = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hva_runner"]

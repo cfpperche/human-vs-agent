@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "expected_output": {
+      "title": "Expected Output",
+      "type": "string"
+    },
+    "hidden": {
+      "default": false,
+      "title": "Hidden",
+      "type": "boolean"
+    },
+    "input": {
+      "title": "Input",
+      "type": "string"
+    }
+  },
+  "required": [
+    "input",
+    "expected_output"
+  ],
+  "title": "TestCase",
+  "type": "object"
+}

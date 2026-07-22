@@ -24,7 +24,7 @@ This document records all foundation steps, complete and pending, up to the firs
 
 - [x] Define the goals and the non-goals of the project. See the goals and non-goals sections in [vision-and-scope.md](vision-and-scope.md).
 - [x] Do a legal review of the data sources. See [data-licensing-review.md](data-licensing-review.md) for the findings, the decisions, and the anonymization rule.
-- [ ] Get owner approval for spec 003 and set its status to `approved`.
+- [x] Get owner approval for spec 003 and set its status to `approved`.
 
 ## Pending: before the first data collection
 

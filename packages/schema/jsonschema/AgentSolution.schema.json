@@ -1,0 +1,82 @@
+{
+  "$defs": {
+    "HarnessMode": {
+      "enum": [
+        "one-shot",
+        "agentic"
+      ],
+      "title": "HarnessMode",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "attempts": {
+      "title": "Attempts",
+      "type": "integer"
+    },
+    "cost_usd": {
+      "title": "Cost Usd",
+      "type": "number"
+    },
+    "harness_mode": {
+      "$ref": "#/$defs/HarnessMode"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "input_tokens": {
+      "title": "Input Tokens",
+      "type": "integer"
+    },
+    "language": {
+      "title": "Language",
+      "type": "string"
+    },
+    "model_version": {
+      "title": "Model Version",
+      "type": "string"
+    },
+    "output_tokens": {
+      "title": "Output Tokens",
+      "type": "integer"
+    },
+    "problem_id": {
+      "title": "Problem Id",
+      "type": "string"
+    },
+    "prompt": {
+      "title": "Prompt",
+      "type": "string"
+    },
+    "source_code": {
+      "title": "Source Code",
+      "type": "string"
+    },
+    "temperature": {
+      "title": "Temperature",
+      "type": "number"
+    },
+    "wall_clock_seconds": {
+      "title": "Wall Clock Seconds",
+      "type": "number"
+    }
+  },
+  "required": [
+    "id",
+    "problem_id",
+    "model_version",
+    "harness_mode",
+    "language",
+    "source_code",
+    "prompt",
+    "temperature",
+    "attempts",
+    "input_tokens",
+    "output_tokens",
+    "cost_usd",
+    "wall_clock_seconds"
+  ],
+  "title": "AgentSolution",
+  "type": "object"
+}
