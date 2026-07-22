@@ -59,3 +59,4 @@ The toolchains, the dependency rules, and the test strategy are in `docs/technol
 - Commit messages: imperative mood, short subject line, English.
 - Do not commit secrets, API keys, or `.env` files.
 - Update the documents in `/docs` when a design decision changes.
+- Update `HANDOFF.md` at the end of each work session. It gives the project state to the next session.
