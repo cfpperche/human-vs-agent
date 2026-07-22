@@ -23,13 +23,14 @@ This document records all foundation steps, complete and pending, up to the firs
 ## Pending: before the first line of code
 
 - [x] Define the goals and the non-goals of the project. See the goals and non-goals sections in [vision-and-scope.md](vision-and-scope.md).
-- [ ] Do a legal review of the data sources. Check the Codeforces terms on the redistribution of problem statements and human submissions. Check the SWE-bench and repository licenses. Decide the anonymization rule for human authors. This review can change the data storage design and the Hugging Face publication plan.
+- [x] Do a legal review of the data sources. See [data-licensing-review.md](data-licensing-review.md) for the findings, the decisions, and the anonymization rule.
 - [ ] Get owner approval for spec 003 and set its status to `approved`.
 
 ## Pending: before the first data collection
 
 - [ ] Create the model registry: the model list for the study, the exact model versions, and each knowledge cutoff date. The collector needs the cutoff dates.
 - [ ] Set the study budget: a money cap for API use and a rule for what happens at the cap.
+- [ ] Owner: read the Codeforces terms in a browser and decide on a permission request. See the open actions in [data-licensing-review.md](data-licensing-review.md).
 
 ## Pending: before the first agent run
 

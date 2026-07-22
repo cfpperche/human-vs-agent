@@ -43,3 +43,9 @@ Each risk has an identifier, a description, an impact level, and a mitigation.
 - Description: generated code runs outside limits and damages the host.
 - Impact: high, low probability with controls.
 - Mitigation: all generated code runs in containers with time and memory limits. No network access from the sandbox by default.
+
+## RSK-8: legal exposure from data redistribution
+
+- Description: Codeforces content has no standard open license. Authors keep the copyright of their submissions. A rights holder can object to the published dataset.
+- Impact: medium. An objection forces removal of content, not the end of the study.
+- Mitigation: collect through the official API, keep source attribution, publish with a takedown policy, and anonymize author handles. Ask Codeforces for permission. See [data-licensing-review.md](data-licensing-review.md).
