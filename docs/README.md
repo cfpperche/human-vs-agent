@@ -16,6 +16,7 @@ This directory contains the SDLC documents of the project. All documents follow 
 | [risk-register.md](risk-register.md) | The known risks and their mitigations. |
 | [pre-code-checklist.md](pre-code-checklist.md) | The foundation steps, complete and pending, up to the first line of code. |
 | [data-licensing-review.md](data-licensing-review.md) | The legal review of the data sources, the publication decisions, and the takedown policy. |
+| [model-registry.md](model-registry.md) | The frozen model list, the freshness rule, and the study budget. |
 | [specs/](specs/README.md) | The spec-driven development process and all specs. |
 
 The documents above show the current state of the project. The specs in [specs/](specs/README.md) record each unit of work and are the change history.
