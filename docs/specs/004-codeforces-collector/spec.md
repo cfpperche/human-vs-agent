@@ -1,6 +1,6 @@
 # Spec 004: Codeforces collector
 
-- Status: draft
+- Status: approved
 - Date: 2026-07-22
 
 ## Goal

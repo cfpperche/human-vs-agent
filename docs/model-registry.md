@@ -32,6 +32,13 @@ TBV = to be verified. Verification of every TBV cell is a blocker for the first 
 - Alert rule: at 50% of the cap, report the spend to the owner in the session summary.
 - Stop rule: at 100% of the cap, stop all runs. Only the owner can raise the cap. Partial results stay valid and enter the report with a coverage note.
 
+## Study runs and exploratory runs
+
+The registry constrains study runs, not development.
+
+- A **study run** produces data for the dataset and the report. A study run must use a model from the registry, with the exact identifier. Its cost counts against the budget cap.
+- An **exploratory run** tests the pipeline during development. It can use any model. Its output must not enter the dataset, the report, or the published data. Mark exploratory output with `exploratory: true` or keep it outside `data/collected/`.
+
 ## Change rules
 
 - A model version change is a new registry row, not an edit. Results never mix rows.
