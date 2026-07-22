@@ -20,7 +20,7 @@ This document records all foundation steps, complete and pending, up to the firs
 
 ## Pending: before the first line of code
 
-- [ ] Define the goals and the non-goals of the project. Add them to [vision-and-scope.md](vision-and-scope.md). A non-goal list prevents scope growth.
+- [x] Define the goals and the non-goals of the project. See the goals and non-goals sections in [vision-and-scope.md](vision-and-scope.md).
 - [ ] Do a legal review of the data sources. Check the Codeforces terms on the redistribution of problem statements and human submissions. Check the SWE-bench and repository licenses. Decide the anonymization rule for human authors. This review can change the data storage design and the Hugging Face publication plan.
 - [ ] Get owner approval for spec 003 and set its status to `approved`.
 
