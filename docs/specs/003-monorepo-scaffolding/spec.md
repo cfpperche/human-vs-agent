@@ -1,6 +1,6 @@
 # Spec 003: monorepo scaffolding
 
-- Status: draft
+- Status: in-progress
 - Date: 2026-07-22
 
 ## Goal

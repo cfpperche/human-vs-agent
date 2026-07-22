@@ -1,0 +1,96 @@
+{
+  "$defs": {
+    "ProblemSource": {
+      "enum": [
+        "codeforces",
+        "swe-bench"
+      ],
+      "title": "ProblemSource",
+      "type": "string"
+    },
+    "TestCase": {
+      "properties": {
+        "expected_output": {
+          "title": "Expected Output",
+          "type": "string"
+        },
+        "hidden": {
+          "default": false,
+          "title": "Hidden",
+          "type": "boolean"
+        },
+        "input": {
+          "title": "Input",
+          "type": "string"
+        }
+      },
+      "required": [
+        "input",
+        "expected_output"
+      ],
+      "title": "TestCase",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "collected_at": {
+      "format": "date-time",
+      "title": "Collected At",
+      "type": "string"
+    },
+    "difficulty_rating": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Difficulty Rating"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "published_at": {
+      "format": "date-time",
+      "title": "Published At",
+      "type": "string"
+    },
+    "source": {
+      "$ref": "#/$defs/ProblemSource"
+    },
+    "statement": {
+      "title": "Statement",
+      "type": "string"
+    },
+    "tests": {
+      "items": {
+        "$ref": "#/$defs/TestCase"
+      },
+      "title": "Tests",
+      "type": "array"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "url": {
+      "title": "Url",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "source",
+    "title",
+    "statement",
+    "url",
+    "published_at",
+    "collected_at"
+  ],
+  "title": "Problem",
+  "type": "object"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "hva-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Web platform of the human-vs-agent project (phase 2). This package only proves the toolchain and the schema bridge.",
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "generate:types": "json2ts -i ../../packages/schema/jsonschema/MatchRecord.schema.json -o src/generated/match-record.ts --additionalProperties false"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "eslint": "^9.0.0",
+    "json-schema-to-typescript": "^15.0.0",
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^3.0.0"
+  }
+}

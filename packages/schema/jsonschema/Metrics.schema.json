@@ -1,0 +1,81 @@
+{
+  "properties": {
+    "cyclomatic_complexity": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Cyclomatic Complexity"
+    },
+    "engine_version": {
+      "title": "Engine Version",
+      "type": "string"
+    },
+    "lines_of_code": {
+      "title": "Lines Of Code",
+      "type": "integer"
+    },
+    "lint_errors": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Lint Errors"
+    },
+    "memory_kb": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Memory Kb"
+    },
+    "runtime_ms": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Runtime Ms"
+    },
+    "solution_id": {
+      "title": "Solution Id",
+      "type": "string"
+    },
+    "tests_passed": {
+      "title": "Tests Passed",
+      "type": "integer"
+    },
+    "tests_total": {
+      "title": "Tests Total",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "solution_id",
+    "engine_version",
+    "tests_passed",
+    "tests_total",
+    "lines_of_code"
+  ],
+  "title": "Metrics",
+  "type": "object"
+}

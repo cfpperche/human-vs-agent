@@ -1,0 +1,377 @@
+{
+  "$defs": {
+    "AgentSolution": {
+      "properties": {
+        "attempts": {
+          "title": "Attempts",
+          "type": "integer"
+        },
+        "cost_usd": {
+          "title": "Cost Usd",
+          "type": "number"
+        },
+        "harness_mode": {
+          "$ref": "#/$defs/HarnessMode"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "input_tokens": {
+          "title": "Input Tokens",
+          "type": "integer"
+        },
+        "language": {
+          "title": "Language",
+          "type": "string"
+        },
+        "model_version": {
+          "title": "Model Version",
+          "type": "string"
+        },
+        "output_tokens": {
+          "title": "Output Tokens",
+          "type": "integer"
+        },
+        "problem_id": {
+          "title": "Problem Id",
+          "type": "string"
+        },
+        "prompt": {
+          "title": "Prompt",
+          "type": "string"
+        },
+        "source_code": {
+          "title": "Source Code",
+          "type": "string"
+        },
+        "temperature": {
+          "title": "Temperature",
+          "type": "number"
+        },
+        "wall_clock_seconds": {
+          "title": "Wall Clock Seconds",
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "problem_id",
+        "model_version",
+        "harness_mode",
+        "language",
+        "source_code",
+        "prompt",
+        "temperature",
+        "attempts",
+        "input_tokens",
+        "output_tokens",
+        "cost_usd",
+        "wall_clock_seconds"
+      ],
+      "title": "AgentSolution",
+      "type": "object"
+    },
+    "HarnessMode": {
+      "enum": [
+        "one-shot",
+        "agentic"
+      ],
+      "title": "HarnessMode",
+      "type": "string"
+    },
+    "HumanSolution": {
+      "properties": {
+        "author_id": {
+          "title": "Author Id",
+          "type": "string"
+        },
+        "author_rating_band": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Author Rating Band"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "language": {
+          "title": "Language",
+          "type": "string"
+        },
+        "memory_kb": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Memory Kb"
+        },
+        "problem_id": {
+          "title": "Problem Id",
+          "type": "string"
+        },
+        "runtime_ms": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Runtime Ms"
+        },
+        "source_code": {
+          "title": "Source Code",
+          "type": "string"
+        },
+        "submitted_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Submitted At"
+        }
+      },
+      "required": [
+        "id",
+        "problem_id",
+        "author_id",
+        "language",
+        "source_code"
+      ],
+      "title": "HumanSolution",
+      "type": "object"
+    },
+    "Metrics": {
+      "properties": {
+        "cyclomatic_complexity": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cyclomatic Complexity"
+        },
+        "engine_version": {
+          "title": "Engine Version",
+          "type": "string"
+        },
+        "lines_of_code": {
+          "title": "Lines Of Code",
+          "type": "integer"
+        },
+        "lint_errors": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Lint Errors"
+        },
+        "memory_kb": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Memory Kb"
+        },
+        "runtime_ms": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Runtime Ms"
+        },
+        "solution_id": {
+          "title": "Solution Id",
+          "type": "string"
+        },
+        "tests_passed": {
+          "title": "Tests Passed",
+          "type": "integer"
+        },
+        "tests_total": {
+          "title": "Tests Total",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "solution_id",
+        "engine_version",
+        "tests_passed",
+        "tests_total",
+        "lines_of_code"
+      ],
+      "title": "Metrics",
+      "type": "object"
+    },
+    "Problem": {
+      "properties": {
+        "collected_at": {
+          "format": "date-time",
+          "title": "Collected At",
+          "type": "string"
+        },
+        "difficulty_rating": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Difficulty Rating"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "published_at": {
+          "format": "date-time",
+          "title": "Published At",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/ProblemSource"
+        },
+        "statement": {
+          "title": "Statement",
+          "type": "string"
+        },
+        "tests": {
+          "items": {
+            "$ref": "#/$defs/TestCase"
+          },
+          "title": "Tests",
+          "type": "array"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "source",
+        "title",
+        "statement",
+        "url",
+        "published_at",
+        "collected_at"
+      ],
+      "title": "Problem",
+      "type": "object"
+    },
+    "ProblemSource": {
+      "enum": [
+        "codeforces",
+        "swe-bench"
+      ],
+      "title": "ProblemSource",
+      "type": "string"
+    },
+    "TestCase": {
+      "properties": {
+        "expected_output": {
+          "title": "Expected Output",
+          "type": "string"
+        },
+        "hidden": {
+          "default": false,
+          "title": "Hidden",
+          "type": "boolean"
+        },
+        "input": {
+          "title": "Input",
+          "type": "string"
+        }
+      },
+      "required": [
+        "input",
+        "expected_output"
+      ],
+      "title": "TestCase",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "agent_solution": {
+      "$ref": "#/$defs/AgentSolution"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "human_solution": {
+      "$ref": "#/$defs/HumanSolution"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "metrics": {
+      "items": {
+        "$ref": "#/$defs/Metrics"
+      },
+      "title": "Metrics",
+      "type": "array"
+    },
+    "problem": {
+      "$ref": "#/$defs/Problem"
+    }
+  },
+  "required": [
+    "id",
+    "problem",
+    "human_solution",
+    "agent_solution",
+    "created_at"
+  ],
+  "title": "MatchRecord",
+  "type": "object"
+}
