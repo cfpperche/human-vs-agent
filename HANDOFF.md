@@ -3,7 +3,7 @@
 This file gives the project state to the next person or agent. Update this file at the end of each work session.
 
 - Last update: 2026-07-22
-- Last commit: `15c2e93` (spec process with specs 001-003)
+- Last commit: `docs: define the development workflow for agents`
 
 ## Project summary
 
@@ -25,6 +25,7 @@ A comparative study of human solutions and AI-agent solutions to the same progra
 - Data split: metadata and fixtures in git, full dataset on Hugging Face Datasets.
 - Test strategy: golden tests, schema contract tests, unit tests with recorded fixtures.
 - CI: one GitHub Actions workflow, Python and Node jobs as mandatory merge gates.
+- Development workflow: spec branch, local gates, pull request with adversarial self-review, owner merges with squash, Conventional Commits. See `docs/development-workflow.md`.
 
 Details are in `docs/technology-stack.md`.
 

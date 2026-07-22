@@ -23,6 +23,16 @@ The project uses spec-driven development. The process is in `docs/specs/README.m
 - When a spec becomes `done`, update the baseline documents in `/docs`.
 - Do not change a `done` spec. Create a new spec for a change.
 
+## Development workflow (mandatory)
+
+The full flow is in `docs/development-workflow.md`. Key rules:
+
+- Branch from `main` as `spec/NNN-short-name`. Do not push directly to `main`.
+- Run the local gates before each push. Do not push when a gate fails.
+- Open a pull request with a link to the spec, then do an adversarial review of your own diff and post the findings as a comment.
+- Do not merge. The owner merges with squash.
+- Commits follow Conventional Commits: `type(scope): subject`.
+
 ## Documentation standard (mandatory)
 
 All documents in this repository must follow ASD-STE100 (Simplified Technical English). The rules are in `docs/documentation-standard.md`. Read that file before you write or change any document.
@@ -56,7 +66,7 @@ The toolchains, the dependency rules, and the test strategy are in `docs/technol
 ## Conventions
 
 - All text in the repository is in English.
-- Commit messages: imperative mood, short subject line, English.
+- Commit messages: Conventional Commits, English. See `docs/development-workflow.md`.
 - Do not commit secrets, API keys, or `.env` files.
 - Update the documents in `/docs` when a design decision changes.
 - Update `HANDOFF.md` at the end of each work session. It gives the project state to the next session.
