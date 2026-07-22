@@ -14,6 +14,7 @@ This directory contains the SDLC documents of the project. All documents follow 
 | [development-workflow.md](development-workflow.md) | The development flow: branches, gates, pull requests, review, and the commit convention. |
 | [project-plan.md](project-plan.md) | The roadmap, the deliverables, and the exit criteria for each phase. |
 | [risk-register.md](risk-register.md) | The known risks and their mitigations. |
+| [pre-code-checklist.md](pre-code-checklist.md) | The foundation steps, complete and pending, up to the first line of code. |
 | [specs/](specs/README.md) | The spec-driven development process and all specs. |
 
 The documents above show the current state of the project. The specs in [specs/](specs/README.md) record each unit of work and are the change history.

@@ -3,7 +3,7 @@
 This file gives the project state to the next person or agent. Update this file at the end of each work session.
 
 - Last update: 2026-07-22
-- Last commit: `docs: define the development workflow for agents`
+- Last commit: `docs: add the pre-code checklist with the review findings`
 
 ## Project summary
 
@@ -31,9 +31,14 @@ Details are in `docs/technology-stack.md`.
 
 ## Next action
 
-1. Get owner approval for spec 003.
-2. Set the spec status to `approved`, then implement it. Follow `docs/specs/003-monorepo-scaffolding/plan.md` and update `tasks.md` during the work.
-3. After spec 003, the next spec is the Codeforces collector. See `docs/project-plan.md`.
+Work through the pending items in `docs/pre-code-checklist.md`, in this order:
+
+1. Define the goals and the non-goals in `docs/vision-and-scope.md`.
+2. Do the legal review of the data sources (Codeforces terms, SWE-bench licenses, author anonymization).
+3. Get owner approval for spec 003, set it to `approved`, then implement it with `plan.md` and `tasks.md`.
+4. Before data collection: create the model registry and set the study budget.
+5. Before agent runs: pre-register the study and define the judging rubric.
+6. After spec 003, the next spec is the Codeforces collector. See `docs/project-plan.md`.
 
 ## Open decisions
 
